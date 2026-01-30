@@ -14,12 +14,12 @@ interface ProductItem {
 }
 
 interface TotalItem {
-  totalIp: number;
-  totalPlan: number;
-  totalAchieved: number;
-  totalRfAchieved:null;
-  totalPending: number;
-  grandTotal: number;
+  totalIp: number| null;
+  totalPlan: number| null;
+  totalAchieved: number| null;
+  totalRfAchieved: number | null;
+  totalPending: number| null;
+  grandTotal: number| null;
 }
 
 const slides = [
@@ -165,12 +165,12 @@ export default function Home() {
                   {totals && (
                   <tr className="bg-[#F1F5F9] font-bold text-md">
                     <td className="px-4 py-3 border-t border-[#e5e5e5]">Total</td>
-                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalIp}</td>
-                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalPlan}</td>
-                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalAchieved}</td>
-                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalRfAchieved}</td>
-                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalPending}</td>
-                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.grandTotal}</td>
+                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalIp ?? 0}</td>
+                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalPlan ?? 0}</td>
+                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalAchieved ?? 0}</td>
+                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalRfAchieved ?? 0}</td>
+                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.totalPending ?? 0}</td>
+                    <td className="px-4 py-3 border-t border-[#e5e5e5]">{totals.grandTotal ?? 0}</td>
                     <td className="px-4 py-3 border-t border-[#e5e5e5]">—</td>
                   </tr>
                 )}
