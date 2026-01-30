@@ -2,15 +2,15 @@
 import { useEffect, useState } from "react";
 
 interface ProductItem {
-  id: number;
-  product: string;
-  ip: string;
-  newPlan: number;
-  newAchieved: number;
-  newRfAchieved:number;
-  newPending: number;
-  total: number;
-  date: string;
+  id: number | null;
+  product: string | null;
+  ip: number | null;
+  newPlan: number | null;
+  newAchieved: number | null;
+  newRfAchieved:number | null;
+  newPending: number | null;
+  total: number | null;
+  date: string | null;
 }
 
 interface TotalItem {
@@ -146,19 +146,19 @@ export default function Home() {
                       key={item.id}
                       className="odd:bg-[#FBFCFD] even:bg-white hover:bg-blue-50 transition text-[#4A586C]"
                     >
-                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.product}</td>
-                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.ip}</td>
-                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.newPlan}</td>
+                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.product ?? "-"}</td>
+                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.ip ?? 0}</td>
+                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.newPlan ?? 0}</td>
                       {/* Achieved Sub Columns */}
                       <td className="px-4 py-3 border-t border-[#e5e5e5]">
-                        {item.newAchieved}
+                        {item.newAchieved ?? 0}
                       </td>
                       <td className="px-4 py-3 border-t border-[#e5e5e5]">
-                        {item.newRfAchieved}
+                        {item.newRfAchieved ?? 0}
                       </td>
-                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.newPending}</td>
-                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.total}</td>
-                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.date}</td>
+                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.newPending ?? 0}</td>
+                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.total ?? 0}</td>
+                      <td className="px-4 py-3 border-t border-[#e5e5e5]">{item.date ?? "-"}</td>
                     </tr>
                   ))}
 
