@@ -3,16 +3,16 @@ import React, { useState } from "react";
 
 export default function SupplierEvaluationForm() {
   const evaluationTable = [
-    ["Conformance to Specification", 40, "On / before time delivery", 20, "ISO / OMS/Applicable Certfication", 15, "100% Commitment", 15, "Grade A", "overall score > 70"],
+    ["Conformance to Specification", 40, "On / before time delivery", 20, "ISO / OMS/Applicable Certfication", 15, "100% Commitment", 15, "Grade A", "overall score ≥ 70"],
     ["Quality of documents (CoA/CoC/documentation etc.)", 10, "Delayed by ≤ one month", 15, "", "", "< 100 to 90 % commitment", 5, "Grade B", "overall score 41 to 89"],
-    ["", "", "Delayed by > one month", 10, "", "", "< 90 % commitment>", 5, "Grade C", "overall score < 40"],
+    ["", "", "Delayed by > one month", 10, "", "", "< 90 % commitment", 5, "Grade C", "overall score ≤ 40"],
     ["Total", 50, "Total", 20, "Total", 15, "Total", 15, "-", "-"],
   ];
 
   const evaluationTables = [
     ["Conformance to Specification", , "On / before time delivery", , "ISO / OMS/Applicable Certfication", , "100% Commitment", , "Grade A"],
     ["Quality of documents (CoA/CoC/documentation etc.)", , "Delayed by ≤ one month", , "", "", "< 100 to 90 % commitment", , "Grade B"],
-    ["", "", "Delayed by > one month", , "", "", "< 90 % commitment>", , "Grade C"],
+    ["", "", "Delayed by > one month", , "", "", "< 90 % commitment", , "Grade C"],
     ["Total", , "Total", , "Total", , "Total", , "Total", ,],
   ];
 
@@ -149,7 +149,7 @@ export default function SupplierEvaluationForm() {
                         {row[8] === "Grade B" && row[9] && (
                           <>
                             <hr className="my-1 border-t border-black" />
-                            <div>Warn – So Improve</div>
+                            <div>Warn to Improve</div>
                           </>
                         )}
                         {row[8] === "Grade C" && row[9] && (
