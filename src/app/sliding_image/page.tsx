@@ -118,29 +118,29 @@ export default function Home() {
       </h2>
 
       <div className="w-full max-w-[1000vh] mx-auto flex flex-col">
-        <div className="max-h-[100vh] sm:max-h-[100vh] overflow-auto rounded-xl border border-gray-200 bg-white">
+        <div className="max-h-[100vh] sm:max-h-[92vh] overflow-auto rounded-xl border border-gray-200 bg-white">
           <table className="min-w-[800px] w-full table-auto border-collapse text-center text-xs sm:text-sm text-gray-800">
             <thead className="sticky top-0 bg-[#1E3A8A] text-white z-10 text-[12px] sm:text-[14px]">
               <tr>
-                <th rowSpan={2} className="px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
+                <th rowSpan={2} className="w-[14%] px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
                   Analyser Name
                 </th>
-                <th rowSpan={2} className="px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
+                <th rowSpan={2} className="w-[14%] px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
                   IP
                 </th>
-                <th rowSpan={2} className="px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
+                <th rowSpan={2} className="w-[14%] px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
                   Plan
                 </th>
-                <th colSpan={2} className="px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
+                <th colSpan={2} className="w-[14%] px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
                   Achieved
                 </th>
-                <th rowSpan={2} className="px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
+                <th rowSpan={2} className="w-[14%] px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
                   Pending
                 </th>
-                <th rowSpan={2} className="px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
+                <th rowSpan={2} className="w-[14%] px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
                   Total
                 </th>
-                <th rowSpan={2} className="px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
+                <th rowSpan={2} className="w-[14%] px-[1px] py-[0.5px] font-semibold border border-[#e5e5e5]">
                   Date
                 </th>
               </tr>
@@ -155,7 +155,7 @@ export default function Home() {
             </thead>
 
             <tbody>
-              {productData.slice(0, 30).map((item: ProductItem) => (
+              {productData.map((item: ProductItem) => (
                 <tr
                   key={item.id ?? Math.random()}
                   className="odd:bg-[#FBFCFD] even:bg-white hover:bg-blue-50 transition text-[#4A586C]"
