@@ -117,8 +117,8 @@ export default function Home() {
         Daily Output - 2025-2026
       </h2>
 
-      <div className="w-full max-w-7xl mx-auto flex flex-col">
-        <div className="max-h-[100vh] sm:max-h-[92vh] overflow-auto rounded-xl border border-gray-200 bg-white">
+      <div className="w-full max-w-[1000vh] mx-auto flex flex-col">
+        <div className="max-h-[100vh] sm:max-h-[100vh] overflow-auto rounded-xl border border-gray-200 bg-white">
           <table className="min-w-[800px] w-full table-auto border-collapse text-center text-xs sm:text-sm text-gray-800">
             <thead className="sticky top-0 bg-[#1E3A8A] text-white z-10 text-[12px] sm:text-[14px]">
               <tr>
@@ -169,16 +169,16 @@ export default function Home() {
                   <td className="px-[1px] py-[0.5px] border border-[#e5e5e5]">
                     {item.newPlan ?? 0}
                   </td>
-                  <td className="px-[1px] py-[0.5px] border-[#e5e5e5]">
+                  <td className="px-[1px] py-[0.5px] border border-[#e5e5e5]">
                     {item.newAchieved ?? 0}
                   </td>
-                  <td className="px-[1px] py-[0.5px] border-[#e5e5e5]">
+                  <td className="px-[1px] py-[0.5px] border border-[#e5e5e5]">
                     {item.newRfAchieved ?? 0}
                   </td>
-                  <td className="px-[1px] py-[0.5px] border-[#e5e5e5]">
+                  <td className="px-[1px] py-[0.5px] border border-[#e5e5e5]">
                     {item.newPending ?? 0}
                   </td>
-                  <td className="px-[1px] py-[0.5px] border-[#e5e5e5]">
+                  <td className="px-[1px] py-[0.5px] border border-[#e5e5e5]">
                     {item.total ?? 0}
                   </td>
                   <td className="px-[1px] py-[0.5px] border border-[#e5e5e5]">
